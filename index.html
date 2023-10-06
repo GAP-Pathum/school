@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Name</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
 </head>
 <body>
      <!-- Header Section -->
@@ -28,31 +27,45 @@
     </section>
 
     <!-- Other sections will follow similarly -->
+
     <!-- News Slider Section -->
-    <section id="news-slider">
+   <section id="news-slider">
+
+    <!-- Radio buttons for slide control -->
+    <input type="radio" name="slides" id="slide1" checked>
+    <input type="radio" name="slides" id="slide2">
+    <input type="radio" name="slides" id="slide3">
+
+    <!-- Slides -->
+    <div class="slides-container">
+
+        <!-- Slide 1 -->
         <div class="news-slide" data-slide="1">
-            <img src="path-to-news-image1.jpg" alt="News Image 1">
+            <img src="news1.jpg" alt="News Image 1">
             <h2>News Title 1</h2>
             <p>Short description or excerpt for the first news item...</p>
         </div>
+
+        <!-- Slide 2 -->
         <div class="news-slide" data-slide="2">
-            <img src="path-to-news-image2.jpg" alt="News Image 2">
+            <img src="news2.jpg" alt="News Image 2">
             <h2>News Title 2</h2>
             <p>Short description or excerpt for the second news item...</p>
         </div>
+
+        <!-- Slide 3 -->
         <div class="news-slide" data-slide="3">
-            <img src="path-to-news-image2.jpg" alt="News Image 3">
+            <img src="news3.jpg" alt="News Image 3">
             <h2>News Title 3</h2>
-            <p>Short description or excerpt for the second news item...</p>
+            <p>Short description or excerpt for the third news item...</p>
         </div>
-        <div class="news-slide" data-slide="4">
-            <img src="path-to-news-image2.jpg" alt="News Image 4">
-            <h2>News Title 4</h2>
-            <p>Short description or excerpt for the second news item...</p>
-        </div>
-        <!-- Add more slides as necessary -->
-        <button onclick="prevSlide()">Previous</button>
-        <button onclick="nextSlide()">Next</button>
+    </div>
+    <div class="slide-controls">
+        <label for="slide1" class="slide-control">1</label>
+        <label for="slide2" class="slide-control">2</label>
+        <label for="slide3" class="slide-control">3</label>
+    </div>
+
     </section>
 
 

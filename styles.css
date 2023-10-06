@@ -39,7 +39,70 @@ nav a:hover, button:hover {
     text-align: center;
 }
 
+#news-slider {
+    position: relative;
+    width: 100%;
+    max-width: 600px;  /* Adjust as needed */
+    margin: 20px auto;
+    overflow: hidden;
+}
+h1{
+    font-weight: 1000;
+    color: #ffffff;
+}
+
+
+.slides-container {
+    display:flex;
+    width: 300%; /* 3 slides each 100% width */
+    transition: transform 0.5s;
+}
+
+.news-slide {
+    flex: 0 0 33.33%; /* Each slide takes up 1/3 of the container */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.news-slide img {
+    max-width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.slide-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.slide-control {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: #eee;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#slide1:checked ~ .slides-container {
+    transform: translateX(0%);
+}
+
+#slide2:checked ~ .slides-container {
+    transform: translateX(-33.33%);
+}
+
+#slide3:checked ~ .slides-container {
+    transform: translateX(-66.67%);
+}
+
+
 button {
+    display: flex;
     background-color: #0000FF; /* Blue */
     color: #FFFF00; /* Yellow */
     border: none;
@@ -49,13 +112,15 @@ button {
 
 @keyframes changeBackground {
     0%, 33% {
-        background-image: url('path-to-image1.jpg');
+        background-image: url('scl1.jpg');
+        height: 500px;
     }
     34%, 66% {
-        background-image: url('path-to-image2.jpg');
+        background-image: url('scl2.jpg');
     }
     67%, 100% {
-        background-image: url('path-to-image3.jpg');
+        background-image: url('scl3.jpg');
+        height: 500px;
     }
 }
 
@@ -65,15 +130,15 @@ button {
 
 
 footer {
-    background-color: #0000FF; /* Blue */
-    color: #FFFF00; /* Yellow */
+    background-color: #0000FF;
+    color: #FFFF00; 
     text-align: center;
     padding: 1rem 0;
 }
 .google-map {
     width: 100%;
-    max-width: 400px;  /* Adjust if needed */
-    height: 300px;  /* Adjust if needed */
+    max-width: 00px;  
+    height: 300px; 
     overflow: hidden;
     position: relative;
 }
@@ -83,29 +148,6 @@ footer {
     height: 100%;
 }
 
-#news-slider {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-width: 800px; /* or your desired width */
-    margin: 2rem auto;
-}
-
-.news-slide {
-    display: none;
-    padding: 1rem;
-    transition: opacity 0.3s;
-}
-
-.news-slide img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 1rem; /* Spacing between image and news title */
-}
-
-.news-slide[data-slide="1"] {
-    display: block;
-}
 
 /*____________________about us______________________*/
 
