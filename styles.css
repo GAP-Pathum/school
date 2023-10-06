@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #0000FF; /* Blue */
+    color: #FFFF00; /* Yellow */
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+nav a {
+    margin: 0 1rem;
+    color: #FFFF00; /* Yellow */
+    text-decoration: none;
+}
+
+nav a:hover, button:hover {
+    background-color: #FFFF00; /* switch the colors */
+    color: #0000FF;
+    transition: 0.5s;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#hero {
+    height: 400px; /* or any height you want */
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-image 1s ease-in-out;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+button {
+    background-color: #0000FF; /* Blue */
+    color: #FFFF00; /* Yellow */
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+@keyframes changeBackground {
+    0%, 33% {
+        background-image: url('path-to-image1.jpg');
+    }
+    34%, 66% {
+        background-image: url('path-to-image2.jpg');
+    }
+    67%, 100% {
+        background-image: url('path-to-image3.jpg');
+    }
+}
+
+#hero {
+    animation: changeBackground 15s infinite;
+}
+
+
+footer {
+    background-color: #0000FF; /* Blue */
+    color: #FFFF00; /* Yellow */
+    text-align: center;
+    padding: 1rem 0;
+}
+.google-map {
+    width: 100%;
+    max-width: 400px;  /* Adjust if needed */
+    height: 300px;  /* Adjust if needed */
+    overflow: hidden;
+    position: relative;
+}
+
+.google-map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#news-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px; /* or your desired width */
+    margin: 2rem auto;
+}
+
+.news-slide {
+    display: none;
+    padding: 1rem;
+    transition: opacity 0.3s;
+}
+
+.news-slide img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem; /* Spacing between image and news title */
+}
+
+.news-slide[data-slide="1"] {
+    display: block;
+}
+
+/*____________________about us______________________*/
+
+#about {
+    padding: 2rem;
+}
+
+#about h1, #about h2 {
+    color: #0000FF; /* Blue */
+}
+
+#about p {
+    margin: 1rem 0;
+    color: #333; /* Dark Grey for readable text */
+}
+
+.about-img {
+    max-width: 100%;
+    margin: 1rem 0;
+}
+
+/*__________________Admission__________________*/
+
+#admission-form {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.form-actions {
+    margin-top: 2rem;
+}
+
+.form-actions button {
+    margin-right: 1rem;
+}
+.apply-button, .cancel-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #0000FF; /* or your desired color */
+    color: #FFFF00; /* or your desired color */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.apply-button:hover, .cancel-button:hover {
+    background-color: #FFFF00; /* switch the colors */
+    color: #0000FF;
+}

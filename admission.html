@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission - School Name</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="logo.png" alt="School Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="admission.html">Admissions</a>
+            <!-- Add more navigation links as needed -->
+        </nav>
+    </header>
+    <!-- ... -->
+
+    <!-- Admission Form -->
+    <section id="admission-form">
+        <h1>Admission Form</h1>
+        <form action="path-to-server-endpoint" method="post" enctype="multipart/form-data">
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="fullName" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dateOfBirth" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+
+            <label for="contact">Contact Details:</label>
+            <input type="text" id="contact" name="contactDetails" required>
+
+            <label for="parents">Mother's name:</label>
+            <textarea id="parents" name="parentsDetails" required></textarea>
+
+            <label for="parents">Father's name:</label>
+            <textarea id="parents" name="parentsDetails" required></textarea>
+
+            <label for="skills">Skills:</label>
+            <textarea id="skills" name="skills"></textarea>
+
+            <label for="achievements">Achievements:</label>
+            <textarea id="achievements" name="achievements"></textarea>
+
+            <label for="previous-school">Previous School Details (if any):</label>
+            <textarea id="previous-school" name="previousSchool"></textarea>
+
+            <label for="distance">Distance from Home (in kilometers):</label>
+            <input type="number" id="distance" name="distanceFromHome">
+
+            <label for="travel-method">Travelling Method:</label>
+            <select id="travel-method" name="travelMethod">
+                <option value="bus">Bus</option>
+                <option value="car">Car</option>
+                <option value="walk">Walk</option>
+                <option value="bicycle">Bicycle</option>
+                <!-- Add more methods as necessary -->
+            </select>
+
+            <label for="birth-certificate">Upload Birth Certificate:</label>
+            <input type="file" id="birth-certificate" name="birthCertificate" accept=".pdf,.jpg,.jpeg,.png" required>
+
+            <div class="form-actions">
+                <button type="submit" class="cancel-button">Submit</button>
+                <button type="reset" class="cancel-button">Reset</button>
+                <a href="index.html" class="cancel-button">Cancel</a>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <p>madullanational@gmail.com</p>
+            <p>Phone: 052-4373921</p>
+            <p>Address: Madulla, Udapussallawa</p>
+        </div>
+        <!-- Embedded Google Map -->
+        <div class="google-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53278.58567245008!2d80.9006070680562!3d7.0146254873409255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae486e472946ea1%3A0xa74c9459b262457d!2sN%2FW%20Madulla%20Maha%20Vidyalaya!5e0!3m2!1sen!2slk!4v1696566203133!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <!-- Add social media links and other footer details -->
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
