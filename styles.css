@@ -1,32 +1,33 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
+    background-color: #e6f84567;
 }
 
 header {
-    background-color: #0000FF; /* Blue */
-    color: #FFFF00; /* Yellow */
+    background-color:blue;
+    color: yellow;
     display: flex;
     justify-content: space-between;
     padding: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 nav a {
     margin: 0 1rem;
-    color: #FFFF00; /* Yellow */
+    color:yellow;
     text-decoration: none;
 }
 
 nav a:hover, button:hover {
-    background-color: #FFFF00; /* switch the colors */
-    color: #0000FF;
+    background-color: #FFFF00;
+    color:blue;
     transition: 0.5s;
     padding: 5px;
     border-radius: 5px;
 }
 
 #hero {
-    height: 400px; /* or any height you want */
+    height: 600px;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -34,58 +35,56 @@ nav a:hover, button:hover {
     justify-content: center;
     transition: background-image 1s ease-in-out;
 }
+#hero h1{
+    font-size: 40px;
+    color: white;
+    background-color: #00000000;
+    padding: 20px;
+    border: solid;
+    border-radius: 20px;
+    border-color:white;
+    backdrop-filter: blur(2px);
+}
+#hero h1:hover{
+    color: yellow;
+    border-color:blue;
+    backdrop-filter: blur(5px);
+    transition: 1s;
+
+}
 
 .hero-content {
     text-align: center;
+    display: block;
 }
 
+/*-- News Slider Section --*/
 #news-slider {
-    position: relative;
     width: 100%;
-    max-width: 600px;  /* Adjust as needed */
-    margin: 20px auto;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
     overflow: hidden;
 }
-h1{
-    font-weight: 1000;
-    color: #ffffff;
-}
-
 
 .slides-container {
-    display:flex;
-    width: 300%; /* 3 slides each 100% width */
-    transition: transform 0.5s;
+    display: flex;
+    width: 300%;
+    transition: all 0.3s;
 }
 
 .news-slide {
-    flex: 0 0 33.33%; /* Each slide takes up 1/3 of the container */
-    padding: 20px;
+    width: 33.33%;
     box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s;
 }
 
 .news-slide img {
     max-width: 100%;
-    display: flex;
-    margin-bottom: 10px;
-}
-
-.slide-controls {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.slide-control {
-    display: flex;
-    width: 30px;
-    height: 30px;
-    background-color: #eee;
-    text-align: center;
-    line-height: 30px;
-    border-radius: 50%;
-    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 15px;
 }
 
 #slide1:checked ~ .slides-container {
@@ -97,19 +96,55 @@ h1{
 }
 
 #slide3:checked ~ .slides-container {
-    transform: translateX(-66.67%);
+    transform: translateX(-66.66%);
+}
+
+.slide-controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.slide-control {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    line-height: 20px;
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+}
+
+#slide1:checked ~ .slide-controls label[for="slide1"],
+#slide2:checked ~ .slide-controls label[for="slide2"],
+#slide3:checked ~ .slide-controls label[for="slide3"] {
+    background-color: #0057A3;
+    color: #FFEB3B;
 }
 
 
+.slide-control:hover {
+    background-color: #FFEB3B; 
+    color: #0057A3;
+}
+
+#news-slider input[type="radio"] {
+    display: none;
+}
+
 button {
     display: flex;
-    background-color: #0000FF; /* Blue */
-    color: #FFFF00; /* Yellow */
+    background-color: #0000FF;
+    color: #FFFF00;
     border: none;
     padding: 0.5rem 1rem;
     cursor: pointer;
 }
-
+/*-----hero background animation-----*/
 @keyframes changeBackground {
     0%, 33% {
         background-image: url('scl1.jpg');
@@ -128,19 +163,37 @@ button {
     animation: changeBackground 15s infinite;
 }
 
-
+/*-------footer---------------*/
 footer {
     background-color: #0000FF;
     color: #FFFF00; 
     text-align: center;
     padding: 1rem 0;
 }
+
+.footer-content {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 2rem; 
+}
+
+.contact-details {
+    flex: 1; 
+    max-width: 50%; 
+}
+.contact-details a{
+    color: yellow;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 .google-map {
-    width: 100%;
-    max-width: 00px;  
+    flex: 1; 
+    max-width: 50%;
     height: 300px; 
     overflow: hidden;
-    position: relative;
+    border-radius: 10px;
 }
 
 .google-map iframe {
@@ -152,22 +205,37 @@ footer {
 /*____________________about us______________________*/
 
 #about {
-    padding: 2rem;
+    font-family: 'Arial', sans-serif;
+    padding: 1em;
+    color: #0202ae;
 }
 
-#about h1, #about h2 {
-    color: #0000FF; /* Blue */
-}
-
-#about p {
-    margin: 1rem 0;
-    color: #333; /* Dark Grey for readable text */
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+    font-family: 'Nirmala UI';
+    color: #0202ae;
 }
 
 .about-img {
-    max-width: 100%;
-    margin: 1rem 0;
+    max-width: 45%;
+    height: auto;
 }
+
+.vision-mission {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+
+.history {
+    text-align: center;
+}
+
 
 /*__________________Admission__________________*/
 
@@ -175,6 +243,9 @@ footer {
     padding: 2rem;
     max-width: 800px;
     margin: 0 auto;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #0000FF;
 }
 
 label {
@@ -202,14 +273,47 @@ select {
 .apply-button, .cancel-button {
     display: inline-block;
     padding: 10px 15px;
-    background-color: #0000FF; /* or your desired color */
-    color: #FFFF00; /* or your desired color */
+    background-color: #0000FF; 
+    color: #FFFF00;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
 .apply-button:hover, .cancel-button:hover {
-    background-color: #FFFF00; /* switch the colors */
+    background-color: #FFFF00;
     color: #0000FF;
+}
+
+/*--------gallery-------------*/
+
+#gallery-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-item p {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f4f4f4;
+    margin: 0;
 }
